@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --mainFont: "Manrope", sans-serif;
+    --mainfontColor: #ffffff;
+    --secfontColor: #BFBFBF;
+    --mainbackground: #1A1A1A;
+    --secbackground: #0F0F0F;
+}
+
+html,
+body {
+    background-color: var(--mainbackground);
+    margin: 0;
+    padding: 0;
+    font-family: var(--mainFont);
+    font-size: large;
+}
+
+.swipersection,
+.swipersection * {
+    background-color: transparent !important;
+}
+
+.h1,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h3,
+h4,
+h5,
+h6{
+    font-family: var(--mainFont);
+    color: var(--mainfontColor);
+}
+a{
+    text-decoration: none;
+}
+h2,
+.h2 {
+    font-family: var(--mainFont);
+    color: red;
+    font-size: xx-large;
+}
+
+p,.p ,a{
+    font-family: var(--mainFont);
+    color: var(--secfontColor);
+}
+
+.bg-red {
+    background-color: red;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    min-width: fit-content;
+}
+
+.bg-red img {
+    transition: all 0.3s ease-in-out;
+}
+
+.bg-red p {
+    transition: all 0.3s ease-in-out;
+}
+.bg-main{
+    background-color: #1f1f1f;
+}
+
+.bg-red:hover {
+    scale: 1.1;
+    box-shadow: 0 0 10px red;
+}
+.devices .card,.plans .card{
+    transition: all 0.3s ease-in-out;
+}
+.devices .card:hover,.plans .card:hover{
+    scale: 1.1;
+    z-index: 2;
+    box-shadow: 0 0 10px red;
+}
+.bg-red:hover p {
+    transform: translateX(-9%);
+    color: var(--mainfontColor);
+}
+
+.bg-red:hover img {
+    transform: translateX(-50%) rotate(-90deg);
+    opacity: 0;
+}
+
+.hiddenAnima{
+    opacity: 0;
+    transform: translateY(100%) scale(0);
+    transition: opacity .6s linear, transform .6s linear;
+    will-change: transform, opacity;
+}
+.visibleanima{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hiddenAnima {
+        transition: none;
+    }
+}

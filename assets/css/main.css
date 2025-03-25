@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* start header */
+header{
+    background-image:linear-gradient(#1A1A1A,transparent,#1A1A1A), url(./../img/home/header/background/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.nav-link{
+    font-family: var(--mainFont);
+    color: var(--secfontColor);
+    transition: all 0.3s ease-in-out;
+}
+header .navbar-nav ,header .nav-item{
+    background-color: var(--secbackground);
+}
+header .navbar-nav{
+    border: 3px solid var(--mainbackground);
+}
+header .navbar-nav .nav-link:hover,
+header .navbar-nav .nav-link.active{
+    background-color: var(--mainbackground);
+    border-radius: 10px;
+    color: var(--mainfontColor);
+}
+header .hiddenDispaly{
+    opacity: 0;
+    pointer-events: none;
+}
+header .searchForm{
+    background-color :rgba(255, 255, 255, 0.3);
+    color: var(--mainfontColor);
+}
+header .searchForm:focus{
+    box-shadow:0 0 9px #ffffff;
+    background-color :rgba(255, 255, 255, 0.6);
+    color: var(--mainfontColor);
+}
+header .searchForm::placeholder{
+    color: var(--mainfontColor);
+}
+.slideinside{
+    animation: slideIn .5s;
+}
+.slideout{
+    animation: slideOut .5s;
+}
+header .playB {
+    position: relative;
+}
+header .buttom1 {
+    animation: slidebuttom 1s;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    width: 25%;
+    max-width: 250px;
+}
+header .buttom2 {
+    position: absolute;
+    width: 50%;
+    max-width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -50%) scale(0.5) rotate(0deg);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+header .playB .buttom1:hover{
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+}
+header .playB .buttom1:hover +.buttom2 {
+    opacity: 1;
+    transform: translate(-55%, -50%) scale(1) rotate(180deg);
+}
+header form img{
+    cursor: pointer;
+}
+header .navbar-toggler-icon{
+    filter: invert(100%);
+    width: 40px;
+    height: 40px
+}
+/* end header */
+
+/* start swipersection */
+.swipersection .swiper-slide {
+	width: 30%;
+	border-radius: 15px;
+	height: 400px;
+}
+.swipersection .card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #262626 20%, transparent);
+    pointer-events: none;
+	border-radius: 15px;
+    border:2px rgb(100, 100, 100) solid;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+}
+.swipersection .card .card-image img{
+	width: 50%;
+	height: 150px;
+}
+.swipersection .card .image-content .arrow{
+	width: 50px;
+	height: 40px;
+}
+.swipersection .sticky-bottom{
+    background-color: red !important;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    min-width: fit-content;
+    border: 2px solid rgb(255, 127, 127);
+
+}
+.swipersection .sticky-bottom img{
+    transition: all 0.3s ease-in-out;
+}
+.swipersection .sticky-bottom p{
+    transition: all 0.3s ease-in-out;
+}
+.swipersection .sticky-bottom:hover{
+    scale: 1.1;
+    box-shadow: 0 0 10px red;
+}
+.swipersection .sticky-bottom:hover img {
+    transform:rotate(-90deg);
+}
+.swiper-3d .swiper-slide-shadow, .swiper-3d .swiper-slide-shadow-bottom, .swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right, .swiper-3d .swiper-slide-shadow-top{
+    border-radius: 15px;
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    background-color: red !important;
+}
+/* end swipersection */
+
+/* start devices */
+.devices .card{
+    background-image:linear-gradient(45deg ,var(--secbackground) 70% ,#e40000 150%);
+    border: 1px solid var(--secbackground);
+}
+.devices .p-1{
+    transition-delay: 100ms;
+}
+.devices .card .card_icon{
+    background-color: #141414;
+    border: 1px solid var(--mainbackground);
+}
+/* end devices */
+
+/* start quastion */
+.quastion .min__width{
+    min-width: fit-content;
+}
+.accordion-item{
+    border: none;
+    position: relative;
+}
+.accordion-item{
+    position: relative;
+}
+.accordion-item::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image:linear-gradient(to right ,var(--mainbackground),#ff0000,var(--mainbackground));
+}
+.rotate-out {
+    animation: rotate-out 0.5s ease-in-out;
+}
+.rotate-in {
+    animation: rotate-in 0.5s ease-in-out;
+}
+/* end quastion */
+/* start plans */
+.plans .buttons{
+    background-color: var(--secbackground);
+    border: 1px solid #262626;
+    max-width: fit-content;
+    min-width: fit-content;
+}
+.btn.active , .btn:hover{
+    background-color: var(--mainbackground);
+}
+.plans .card{
+    border: 1px solid #262626;
+    background-color: #1f1f1f;
+}
+.plans .card .pointer{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.plans .card .pointer:hover{
+    scale:1.1;
+}
+.plans .card-link{
+    max-width: fit-content;
+    min-width: fit-content;
+}
+.plans .plans-bg{
+    border: 2px solid #262626;
+    background-image: linear-gradient(to right , rgba(0, 0, 0, 0.9) 20% , transparent , rgba(255, 0, 0) 110%),url(./../img/home/Container.png);
+    background-size: cover;
+    height: 100%;
+}
+/* end plans */
+/* start footer */
+footer{
+    background-color: #1f1f1f;
+    border-top: 1px solid #262626;
+    text-align: center;
+}
+footer .icon{
+    width: fit-content;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+footer .icon:hover{
+    filter: brightness(140%);
+    scale: 1.1;
+}
+footer .icon img{
+    width: 25px;
+}
+footer .list-unstyled .line{
+    padding:0 10px;
+    position: relative;
+}
+footer .list-unstyled .line::after{
+    content: "";
+    height: 100%;
+    width: 2px;
+    background-image: linear-gradient(transparent, #707070 , transparent); 
+    position: absolute;
+    right: 0;
+}
+footer .form-outline .form-control{
+    background-color:rgba(255, 255, 255, 0.685);
+}
+footer .form-outline .form-control:focus{
+    box-shadow:0 0 9px #ffffff;
+    background-color :rgba(255, 255, 255, 0.6);
+    color: var(--mainfontColor);
+}
+footer .form-outline .form-control::placeholder{
+    color: var(--mainfontColor);
+}
+
+
+/* end footer */
+@media screen and (max-width: 1200px) {
+    html,body {
+        font-size:small;
+    }
+    header .buttom1 {
+        width: 20%;
+        min-width: 150px;
+    }
+    header .buttom2 {
+        width: 40%;
+        min-width: 200px;
+    }
+    .swipersection .swiper-slide {
+        width: 40%;
+    }
+    .quastion .min__width{
+        min-width: 200px;
+        height: 40px;
+    }
+}
+@media screen and (max-width: 992px) {
+    header .buttom1 {
+        width: 29%;
+    }
+    header .buttom2 {
+        width: 50%;
+    }
+    .swipersection .swiper-slide {
+        width: 50%;
+    }
+    .quastion .min__width{
+        width: 200px;
+    }
+}
+@media screen and (max-width: 768px) {
+    header .buttom1 {
+        width: 30%; 
+    }
+    header .buttom2 {
+        width: 50%;
+    }
+    .swipersection .swiper-slide {
+        width: 60%;
+    }
+    footer .text-start .links-footer{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 576px) {
+    header .buttom1 {
+        min-width: 150px;
+    }
+    header .buttom2 {
+       min-width: 200px;
+    }
+    .swipersection .swiper-slide {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .swipersection .swiper-slide {
+        width: 90%;
+    }
+    footer .icons{
+        flex-wrap:wrap;
+    }
+    footer .icon img{
+        width: 15px;
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+}
+@keyframes rotate-out {
+    from {
+        transform: rotate3d(0, 0, 1, 0deg) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: rotate3d(0, 0, 1, 90deg) scale(2);
+
+        opacity: 0;
+    }
+}
+@keyframes rotate-in {
+    from {
+        transform: rotate3d(0, 0, 1, -90deg) scale(2);
+        opacity: 0;
+    }
+    to {
+        transform: rotate3d(0,0, 1, 0) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes slidebuttom {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
